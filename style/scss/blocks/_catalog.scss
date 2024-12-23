@@ -1,0 +1,96 @@
+.catalog {
+    margin-top: 85px;
+
+    .nav {
+        display: block;
+
+        &-wrapper {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 60px;
+            margin-top: 50px;
+            
+            &__item {
+                border: 2px solid $c-highlight;
+                border-radius: 5px;
+                color: $c-highlight;
+                cursor: pointer;
+                display: grid;
+                place-content: center;
+                min-width: 250px;
+                height: 65px;
+                font-size: 16px;
+                font-weight: $fw-black;
+                transition: .5s;
+
+                &--active {
+                    background: $c-highlight;
+                    color: $c-primary;
+                }
+            }
+        }
+    }
+}
+
+.title {
+    @include Roboto;
+    font-weight: $fw-black;
+    font-size: 36px;
+    text-align: center;
+}
+
+.slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frontground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        cursor: pointer;
+    }
+}
+
+.background {
+
+    &-center {
+        margin: 0;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+    }
+}
+
+.sub {
+
+    &-title {
+        text-align: center;
+        font-size: 18px;
+
+        span {
+            font-size: 30px;
+        }
+    }
+
+    &-text {
+        padding-top: 50px;
+        display: flex;
+        justify-content: space-around;
+
+        &__item {
+            font-size: 24px;
+            color: $c-secondary-grey;
+
+            .light-text {
+                font-size: 30px;
+            }
+        }
+    }
+}

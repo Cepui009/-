@@ -1,0 +1,112 @@
+.section-about-as {
+    color: $c-secondary-black;
+    position: relative;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: $fw-black;
+    @include Lato;
+    text-align: center;
+}
+
+.list {
+    
+    &-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        &[class~='reverse'] {
+            .list-content-number {
+                color: $c-highlight;
+                opacity: .3;
+                @include Roboto;
+                font-weight: $fw-black;
+                font-size: 96px;
+                margin: 0;
+                margin-top: 50px;
+
+                grid-column: 2 / 3;
+            }
+
+            .list-content-wrapper {
+                grid-row: 2 / 3;
+                grid-column: 2 / 3;
+            }
+
+            .list-content-image {
+                grid-row: 2 / 3;
+                grid-column: 1 / 2;
+            }
+        }
+
+        &-number {
+            color: $c-highlight;
+            opacity: .3;
+            @include Roboto;
+            font-weight: $fw-black;
+            font-size: 96px;
+            margin: 0;
+            margin-top: 50px;
+
+            grid-row: 1 / 2;
+        }
+
+        // list-content-wrapper
+
+        &-wrapper {
+            grid-row: 2 / 3;
+            @include Lato;
+
+            &-title {
+                font-size: 36px;
+                font-weight: $fw-black;
+
+                .light-text {
+                    font-weight: $fw-black;
+                }
+            }
+
+            &-info {
+                list-style: url('/svg/list-style_about-us.svg');
+                margin: 40px 0;
+
+                &__item + &__item {
+                    padding-top: 40px;
+                }
+
+                &__item {
+                    font-size: 18px;
+                    font-weight: $fw-regular;
+                }
+            }
+
+            &-btn {
+                background-color: $c-highlight;
+                border: 0;
+                border-radius: 5px;
+                box-shadow: 0px 5px 20px 0px $c-highlight;
+                color: $c-primary;
+                font-weight: $fw-bold;
+                height: 85px;
+                width: 420px;
+            }
+        }
+
+        // list-content-image
+
+        &-image {
+            height: 390px;
+            width: 650px;
+
+            grid-row: 2 / 3;
+            grid-column: 2 / 3;
+
+            &__item {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

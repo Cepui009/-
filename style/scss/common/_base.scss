@@ -1,0 +1,54 @@
+::-webkit-scrollbar {
+    width: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.section-inner {
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+.background {
+    position: absolute;
+    z-index: -1;
+    
+    &-left {
+        bottom: 0;
+        left: 0;
+    }
+
+    &-right {
+        top: 0;
+        right: 0;
+    }
+
+}
+
+.light-text {
+    color: $c-highlight;
+    font-weight: $fw-bold;
+    @include Roboto;
+}
+
+.dark-text {
+    color: $c-secondary-black;
+    font-weight: $fw-bold;
+    @include Roboto;
+}

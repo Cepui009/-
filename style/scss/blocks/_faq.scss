@@ -1,0 +1,50 @@
+.section-faq {
+    @include Lato;
+
+    background: url('/img/background-faq.png') no-repeat;
+    color: $c-primary;
+    height: 460px;
+    margin-top: 90px;
+    
+    .title {
+        padding-top: 95px;
+        font-size: 36px;
+        text-align: left;
+    }
+
+    .sub-title {
+        margin-top: 30px;
+        font-size: 18px;
+        text-align: left;
+    }
+}
+
+.form {
+    margin-top: 45px;
+
+    &-text {
+        background-color: $c-primary;
+        border: 0;
+        border-radius: 10px;
+        color: $c-secondary-grey;
+        padding-left: 40px;
+        width: 550px;
+        height: 70px;
+    }
+
+    &-btn {
+        background-color: $c-highlight;
+        border: 0;
+        border-radius: 10px;
+        color: $c-primary;
+        font-weight: $fw-black;
+        font-size: 18px;
+        margin-left: 25px;
+        height: 70px;
+        width: 300px;
+
+        &:hover {
+            background-color: lighten($color: $c-highlight, $amount: 5);
+        }
+    }
+}
